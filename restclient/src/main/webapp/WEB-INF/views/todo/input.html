@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Input 検索ワード</title>
+<link rel="stylesheet"
+    href="../../../resources/app/css/styles.css" th:href="@{/resources/app/css/styles.css}">
+</head>
+<body>
+	<div id="todofindOne">
+		<h1>入力画面</h1>
+		<form th:action="@{/rest/todoOne}" th:object="${todoTitleForm}" method="POST">
+			<div>検索したいTodoTitleを入力してください ：</div>
+			<div>
+				<input type="text" name="todoTitle" th:field="*{todoTitle}" /><br />
+			</div>
+			<div>
+				<button type="submit">送信</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
